@@ -1,6 +1,6 @@
 {
   "name": "browserstacklocal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Binaries for support BrowserStack local tunneling",
   "main": "index.js",
   "scripts": {
