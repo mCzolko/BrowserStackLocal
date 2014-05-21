@@ -72,8 +72,6 @@ function run(args, platform) {
   }
 }
 
-run();
-
 module.exports = {
   run: run,
   close: close
