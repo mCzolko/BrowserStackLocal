@@ -11,7 +11,7 @@ function start(args, binaryFile) {
   });
 
   runningProcess.stderr.on('data', function(err) {
-    console.log(err);
+    console.log(err.toString());
   });
 
   process.on('SIGINT', function() {
@@ -47,23 +47,23 @@ function run(args, platform) {
   switch (platform) {
 
     case 'darwin':
-      start(args, './osx');
+      start(args, 'osx');
       break;
 
     case 'freebsd':
-      start(args, './linux' + architecture);
+      start(args, './'+ __dirname +'linux'+ architecture);
       break;
 
     case 'linux':
-      start(args, './linux' + architecture);
+      start(args, './'+ __dirname +'linux'+ architecture);
       break;
 
     case 'sunos':
-      start(args, './linux' + architecture);
+      start(args, './'+ __dirname +'linux'+ architecture);
       break;
 
     case 'win32':
-      start(args, 'win.exe');
+      start(args, __dirname +'win.exe');
       break;
 
     default:
