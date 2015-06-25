@@ -47,7 +47,7 @@ function run(args, platform) {
   switch (platform) {
 
     case 'darwin':
-      start(args, 'osx');
+      start(args, __dirname +'/osx');
       break;
 
     case 'freebsd':
